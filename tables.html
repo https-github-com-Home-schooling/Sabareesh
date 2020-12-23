@@ -1,0 +1,64 @@
+<!-- tables.html -->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../sabareesh/study/css/tabels style.css">
+    <title>Multiplication Table</title>
+</head>
+<body id="bdy">
+    <button id="light" onclick="light()">Light</button>
+    <button id="dark"  onclick="dark()">Dark</button>
+
+    <div id="display">
+        <div id="1" class="odd"></div>
+        <div id="2" class="even"></div>
+        <div id="3" class="odd"></div>
+        <div id="4" class="even"></div>
+        <div id="5" class="odd"></div>
+        <div id="6" class="even"></div>
+        <div id="7" class="odd"></div>
+        <div id="8" class="even"></div>
+        <div id="9" class="odd"></div>
+        <div id="10" class="even"></div>
+    </div>
+    <script>
+        var i,j;
+        var t=" ";
+        
+        for(i=1;i<11;i++)
+        {
+            for(j=1;j<11;j++)
+            {
+                t+=j+"x"+i+"="+j*i+"<br>";
+                
+            }   
+            if(j=10)
+                {
+                    // document.write(t+"<hr>"+"<hr>");
+                    document.getElementById(i).innerHTML=t;
+                    t="";
+                }         
+        }
+        // document.write(t+"\n"+"<hr>");
+        function light()
+        {
+            document.getElementById("bdy").style.backgroundColor= "rgb(255,255,255)";
+            document.getElementById("bdy").style.color="black";
+            document.getElementById("light").style.backgroundColor="rgb(40,44,52)";
+            document.getElementById("light").style.color="white";
+            document.getElementById("dark").style.backgroundColor="white";
+            document.getElementById("dark").style.color="rgb(40,44,52)";
+        }
+        function dark()
+        {
+            document.getElementById("bdy").style.backgroundColor= "rgb(40,44,52)";
+            document.getElementById("bdy").style.color="grey";
+            document.getElementById("dark").style.backgroundColor="rgb(40,44,52)";
+            document.getElementById("dark").style.color="white";
+            document.getElementById("light").style.backgroundColor="white";
+            document.getElementById("light").style.color="rgb(40,44,52)";
+        }
+    </script>
+</body>
+</html>
